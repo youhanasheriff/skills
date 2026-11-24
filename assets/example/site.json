@@ -1,0 +1,19 @@
+{
+  "title": "Acme Documentation",
+  "name": "Acme",
+  "logo": "A",
+  "output": "../Acme Docs.html",
+  "footer": "Written from the code on main, 1 Jan 2027",
+  "class_aliases": [],
+  "tabs": [
+    {"prefix": "start", "name": "Home", "subtitle": "Start here: what Acme is and how to begin"},
+    {"prefix": "guide", "name": "Product guides", "subtitle": "Every feature, from the user's side"},
+    {"prefix": "arch", "name": "Architecture", "subtitle": "How the system is built"},
+    {"prefix": "api", "name": "API reference", "subtitle": "Every endpoint"},
+    {"prefix": "ops", "name": "Operations", "subtitle": "Hosting, deploys, releases and runbooks"},
+    {"prefix": "ref", "name": "Resources", "subtitle": "Roadmap, decisions and reference tables"}
+  ],
+  "group_rename": [
+    {"file": "42-arch-server.md", "group": "Data", "to": "Server · Data"}
+  ]
+}
