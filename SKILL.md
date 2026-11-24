@@ -36,11 +36,22 @@ The bundled builder does the HTML; your work is the content and its accuracy.
 
 ### 1. Scope (short)
 
-Find the repositories, their default branches and any decision source (PRD, flows page, decision log, gap list). Note who owns and operates the product, names to avoid, and anything private. Ask the user only what the code can't tell you, typically:
-- which repositories are in scope, if it isn't obvious,
-- whether there's a document of decisions or known gaps to mark **Planned** / **Known gap** against.
+Find the repositories and their default branches. Note who owns and operates the product, names to avoid, and anything private.
 
-Don't ask about layout or style: the design is fixed and already approved twice.
+**Before planning anything, ask the user whether they want to add information beyond the codebase.** Ask once, in one short question, and give examples so they know what counts:
+- product requirements, specs or a feature list,
+- decisions already taken, a roadmap, user flows or a known-gaps list,
+- hosting, deployment or account details that aren't in the repositories,
+- who the docs are for, names or terms to use or avoid, anything to leave out.
+
+They can answer with files, links, pasted text or "no". Also ask which repositories are in scope if that isn't obvious from the workspace.
+
+- **If they add sources:** read them, list them in CONVENTIONS.md under "Sources of truth", and point every writer at them. Decisions found there drive the **Planned** and **Known gap** callouts. Where a source and the code disagree, the page states what the code does and marks the difference.
+- **If they say no (or don't answer):** use the project's code and the files inside its repositories only (code, configs, READMEs, in-repo docs). Don't invent decisions or plans. Without a decision source, use **Planned** only for work the repositories themselves describe as planned, such as a roadmap file or TODO comments, and say where it comes from. Use **Known gap** for code that is broken, inconsistent, unfinished or contradicts its own docs.
+
+Why ask: the code shows what the product does, not what it is meant to do. The extra sources are what turn the docs from a description into a useful map of gaps, and only the user knows they exist.
+
+Don't ask about layout or style: the design is fixed.
 
 ### 2. Set up the workspace
 
@@ -56,7 +67,7 @@ Start `scripts/setup_tools.sh` in the background now (it downloads Chrome for Te
 
 ### 3. Launch writers in parallel
 
-One writer per section (usually 5 to 7), all launched in the same turn, each with the brief template in `references/planning-and-writers.md`. Writers read code only and write only their own files. They must not build, run or deploy anything.
+One writer per section (usually 5 to 7), all launched in the same turn, each with the brief template in `references/planning-and-writers.md`. Writers read the code and the agreed sources only, and write only their own files. They must not build, run or deploy anything.
 
 Why parallel writers: each section needs deep reading of one area of the code. One agent doing everything runs out of context and goes shallow; six agents each go deep, and you keep the whole-site view.
 

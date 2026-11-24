@@ -84,7 +84,7 @@ First read these two files fully and follow them exactly:
 Your section: **{Section}** (writer {X}), ID prefix `{prefix}-`. Write it to {abs}/src/docs/{NN-name}.md
 {If several files: list each file and which planned pages go in it.}
 
-Cover every planned `{prefix}-` page in PAGE_PLAN.md: {what the reader needs from this section, e.g. "for each feature: what it does, how to use it with the real labels, limits and defaults with numbers from the code, and what admins control"}. Mark decided-but-unbuilt behaviour as **Planned** and mismatches as **Known gap**, using {decision source path}.
+Cover every planned `{prefix}-` page in PAGE_PLAN.md: {what the reader needs from this section, e.g. "for each feature: what it does, how to use it with the real labels, limits and defaults with numbers from the code, and what admins control"}. Mark decided-but-unbuilt behaviour as **Planned** and mismatches as **Known gap**, using {extra source paths — or, if the user gave none: "the repositories only, as CONVENTIONS.md describes"}.
 
 Main sources: {repo paths and the folders that matter}. Verify facts in code; docs/ may be stale.
 

@@ -19,7 +19,8 @@ These docs are a Stripe-style documentation site for {Product}, built into one H
 
 - The code in {list repositories with absolute paths and one line each}. Use the checked-out default branch working tree. Do not read {worktrees, archives, build output}.
 - Each repository's `docs/` and `README.md` help, but **the code wins** when they disagree. Trackers and plans can be stale: check the code before saying something is built.
-- {Decision source, e.g. a flows page, PRD or decision log, with path}: use it to mark things **Planned** (decided, not built) and **Known gap** (code differs from the decision).
+- {Extra sources the user gave, each with path or link and what it is (PRD, decision log, flows, hosting notes)}: use them to mark things **Planned** (decided, not built) and **Known gap** (code differs from the decision). Where a source and the code disagree, describe what the code does and mark the difference.
+- {If the user gave no extra sources, replace the line above with:} There are no sources outside the repositories. Use only the code and the files in the repositories. Mark **Planned** only for work the repositories themselves describe as planned (roadmap files, TODOs), citing where. Mark **Known gap** for code that is broken, inconsistent, unfinished or contradicts its own docs. Don't guess at intentions.
 - Read only. Do not modify any repository, build, run tests, start services or contact servers. Write only your own Markdown files.
 
 ## File format

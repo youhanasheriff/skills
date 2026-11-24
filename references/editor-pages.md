@@ -29,7 +29,7 @@ The editor writes the pages that need the whole picture: Home, the system overvi
    - If a decision document has a gap list, reproduce it grouped by area as tables (the product should / the code today / status), with the totals.
    - Then "Other known gaps found while writing these docs": de-duplicated Known gaps from every writer's report, one table per component (gap / where). Put the ones that matter most for safety or launch first and in bold.
    - Then production work (area / work / needed by) and open questions.
-2. **`ref-decisions` Product decisions.** Every decision, newest first (date / topic / decision). Don't name individuals as decision makers unless the user wants that.
+2. **`ref-decisions` Product decisions.** Every decision, newest first (date / topic / decision). Don't name individuals as decision makers unless the user wants that. If the user gave no decision source, build this page only from decisions recorded in the repositories (ADRs, changelogs, design docs) and cite each; if there are none, leave the page out.
 3. **`ref-glossary` Glossary.** Technical terms from the engineering pages; product terms stay in Key concepts.
 4. **`ref-services` Outside services and accounts.** Service / used for / today / for production.
 
