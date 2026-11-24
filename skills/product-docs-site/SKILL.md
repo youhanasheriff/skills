@@ -25,7 +25,7 @@ The bundled builder does the HTML; your work is the content and its accuracy.
 | `scripts/render.mjs` | Mermaid → SVG in headless Chrome with the Inter font loaded first (so labels are measured right and don't clip) |
 | `scripts/setup_tools.sh` | One-time install of the build tools into `~/.cache/product-docs-site/tools` |
 | `scripts/shot.mjs` | Screenshots of given pages for checking layout: `node shot.mjs <html> <out-prefix> page-id[@light\|@dark] …` |
-| `scripts/check_docs.sh` | Scans the sources for IPs, secrets, personal paths, emails and assistant names |
+| `scripts/check_docs.sh` | Scans the sources for IPs, secrets, personal paths and emails |
 | `assets/site/` | Page design (CSS, JS, embedded Inter font). Shared by every site |
 | `assets/example/` | A tiny `site.json` + `docs/` to copy as a starting point |
 | `references/conventions-template.md` | The writing rules every writer follows; copy and fill per project |
@@ -105,7 +105,6 @@ Screenshot a few pages in light and dark (Home, one diagram-heavy architecture p
 
 - **Accuracy over coverage.** Every claim comes from the code or a named document. When the two disagree, the code wins and the page says so. Writers mark decided-but-unbuilt work **Planned** and mismatches **Known gap**; this is what makes the docs useful to the team, not just pretty.
 - **Nothing private in the output.** No secret values, private IPs, SSH hosts, personal paths or people's emails. Name variables, never values.
-- **No assistant attribution** anywhere in the docs, sources or metadata.
 - **Don't modify the product repositories.** The docs live in their own folder.
 - **Diagrams, not drawings.** Every diagram is Mermaid rendered to SVG; never ASCII art. Colour classes: `own`, `ext`, `data`, `bad`, `hw` (plus any alias in `site.json` `class_aliases`).
 

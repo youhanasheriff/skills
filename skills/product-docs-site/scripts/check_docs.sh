@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Scan doc sources for things that must not be published: IP addresses, long hex
-# secrets, key-like strings, personal paths, e-mail addresses and AI-tool names.
+# secrets, key-like strings, personal paths and e-mail addresses.
 # Usage: check_docs.sh <docs-src-dir> [extra-regex]
 set -uo pipefail
 D="$1/docs"; EXTRA="${2:-}"
@@ -10,6 +10,4 @@ echo "== long hex / key-like strings"
 grep -nE '[0-9a-f]{32,}|sk-[A-Za-z0-9]{16,}|AKIA[0-9A-Z]{16}|-----BEGIN' "$D"/*.md || true
 echo "== personal paths and addresses"
 grep -nE '/Users/[a-z]|/home/[a-z]|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,}' "$D"/*.md || true
-echo "== assistant / tool attribution"
-grep -niE '\b(claude|anthropic|codex|chatgpt|copilot|(generated|written) (by|with) (ai|an ai|claude|chatgpt|codex|copilot))\b' "$D"/*.md || true
 if [ -n "$EXTRA" ]; then echo "== extra: $EXTRA"; grep -niE "$EXTRA" "$D"/*.md || true; fi

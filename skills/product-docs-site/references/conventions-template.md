@@ -12,7 +12,6 @@ These docs are a Stripe-style documentation site for {Product}, built into one H
 
 - {One paragraph: what the product is, its parts, who uses it.}
 - {Owner / company naming rules, e.g. "The {Company} team operates everything. Leftover names of other companies in the code are **Known gaps**, not branding."}
-- Never mention AI assistants, coding tools or who wrote these docs. Describe the product only. Model or provider names the product itself uses at runtime are product facts and are fine.
 - No secret values: no tokens, keys, passwords, private IP addresses or SSH addresses. Name secrets and environment variables, never their values.
 
 ## Sources of truth

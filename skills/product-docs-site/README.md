@@ -63,7 +63,7 @@ The ID prefix (`guide`) picks the tab from `site.json`. The build reports broken
 | `scripts/render.mjs` | Mermaid to SVG in headless Chrome |
 | `scripts/setup_tools.sh` | One-time tool install |
 | `scripts/shot.mjs` | Page screenshots for checking layout |
-| `scripts/check_docs.sh` | Scan for secrets, IPs, personal paths and attribution |
+| `scripts/check_docs.sh` | Scan for secrets, IPs, personal paths and emails |
 | `assets/site/` | Page design (CSS, JS, Inter font) |
 | `assets/example/` | Starter `site.json` and pages |
 
